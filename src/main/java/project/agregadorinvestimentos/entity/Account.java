@@ -9,6 +9,7 @@ import java.util.UUID;
 @Entity
 @Table(name = "tb_accounts")
 public class Account {
+
     @Id
     @Column( name = "account_id")
     @GeneratedValue(strategy = GenerationType.UUID)
@@ -44,4 +45,13 @@ public class Account {
     public void setUser(User user) {
         this.user = user;
     }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
 }
